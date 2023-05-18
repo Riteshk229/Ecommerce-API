@@ -51,7 +51,7 @@
    
    ![image](https://github.com/Riteshk229/Ecommerce-API/assets/100128015/ab18a932-7ba0-4ce7-9f12-03828a13d85a)
 
-## 4. Update Products
+## 4. Update Quantity of Products
 
    Admin can update  the quantity of a product by passing the product id and the quantity by which the product may be incremented or        decremented by and sending a `post` Request.
    
