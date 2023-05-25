@@ -1,11 +1,19 @@
-# Ecommerce-API
+#escription:
+The E-commerce REST API is built using Node.js, Express.js, and MongoDB, providing functionality for the admin to manage their product inventory. The API allows for viewing the inventory, creating new products, deleting existing products, and updating the quantity of products.
 
-   An E-commerce REST API created using Node.js, Express.js and MongoDB for Admin to manage his product inventory. It has functionality     like:
+Tech Stack:
+- Node.js: A JavaScript runtime environment that allows running JavaScript on the server-side.
+- Express.js: A web application framework for Node.js, used for handling server-side logic and creating RESTful APIs.
+- MongoDB: A NoSQL database used for storing and retrieving product inventory data.
 
-  1. View Inventory 
-  2. Create Products
-  3. Delete Product
-  4. Update Quantity of Products
+Functionality:
+1. View Inventory: The API provides endpoints to retrieve the product inventory, allowing the admin to view all the products currently available.
+
+2. Create Products: The API includes endpoints for creating new products in the inventory. The admin can provide details such as product name, description, price, and quantity.
+
+3. Delete Product: The API provides an endpoint to delete a specific product from the inventory based on its unique identifier.
+
+4. Update Quantity of Products: The API allows the admin to update the quantity of a product in the inventory. The admin can specify the product ID and the new quantity to update the stock.
 
 ## Setup
 
@@ -62,5 +70,34 @@
    ### Response
    
    ![image](https://github.com/Riteshk229/Ecommerce-API/assets/100128015/c337fd29-1dfa-4341-90d8-88a818ed02dc)
+   
+   
+   ## Folder Structure
+   
+```
+Ecommerce-API
+    |
+    |                  |--->css
+    |--->assets------->|--->img
+    |                  |---> js
+    |
+    |--->config------->|--->mongoose.js
+    |
+    |                  
+    |--->controllers-->|-->api-->|-->vi-->|-->productController.js
+    |         
+    |
+    |--->models------->|-->products.js             
+    |                  
+    |--->routes------->|---->api------>|------>vi----->|-->product.js
+    |                  |---->index.js                  |---->index.js
+    |
+    |
+    |-->.gitignore
+    |--> index.js
+    |--> package-lock.json
+    |-->package.json
+    
+ ````
 
 
