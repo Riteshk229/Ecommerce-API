@@ -7,7 +7,7 @@ const expressLayout = require('express-ejs-layouts');
 
 // Creating an App with Express
 const app = express();
-const port = 3000;
+const port = process.env.port || 3000;
 
 
 //For static files
@@ -30,5 +30,10 @@ app.use(express.urlencoded({extended:true}));
 app.use('/',require('./routes/index'));
 
 app.listen(port,()=>{
+    
+    if(err){
+        console.log("Error in running the server");
+        return;
+    }
     console.log(`Server up and running on port:  ${port}`);
 });
