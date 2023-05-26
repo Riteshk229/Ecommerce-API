@@ -1,5 +1,5 @@
 # Ecommerce API
-The E-commerce REST API is built using Node.js, Express.js, and MongoDB, providing functionality for the admin to manage their product inventory. The API allows for viewing the inventory, creating new products, deleting existing products, and updating the quantity of products.
+The E-commerce API is built using Node.js, Express.js, and MongoDB, providing functionality for the admin to manage their product inventory. The API allows for viewing the inventory, creating new products, deleting existing products, and updating the quantity of products.
 
 Tech Stack:
 - Node.js: A JavaScript runtime environment that allows running JavaScript on the server-side.
