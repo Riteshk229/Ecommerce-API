@@ -82,10 +82,13 @@ Ecommerce-API
     |                  |---> js
     |
     |--->config------->|--->mongoose.js
+    |              
     |
     |                  
     |--->controllers-->|-->api-->|-->vi-->|-->productController.js
-    |         
+    |                  |-->homeController.js
+    |
+    |     
     |
     |--->models------->|-->products.js             
     |                  
