@@ -20,7 +20,7 @@ module.exports.listProducts =  async function(req,res){
             quantity: product.quantity
         }));
         
-        // return the formattted data on success
+        // return the formatted data on succes
         return res.status(200).json({
 
             data : {

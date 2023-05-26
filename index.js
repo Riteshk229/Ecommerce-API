@@ -2,8 +2,6 @@
 const express = require('express');
 const db = require('./config/mongoose');
 
-//Importing template engine
-const expressLayout = require('express-ejs-layouts');
 
 // Creating an App with Express
 const app = express();
