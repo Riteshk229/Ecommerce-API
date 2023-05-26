@@ -19,8 +19,18 @@ module.exports.listProducts =  async function(req,res){
             name: product.name,
             quantity: product.quantity
         }));
-        
+
+        // // Json string
+        // const Jstring = JSON.stringify({
+        //     data : {
+        //         Products: formattedProducts
+        //     },
+        //     message: "These are the Products in Inventory"
+        // }, null, 5);
+
+
         // return the formatted data on succes
+        // return res.status(200).json(Jstring);
         return res.status(200).json({
 
             data : {
