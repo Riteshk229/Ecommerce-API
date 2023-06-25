@@ -131,7 +131,7 @@ module.exports.updateQuantity = async function(req,res){
         
         //Extracting the Quantity to update from the URL which are passed through query
         let update_quantity = req.query.number;
-
+        
         //Extracting the id from the URL which are passed through params
         const id = req.params.id;
         
@@ -140,37 +140,51 @@ module.exports.updateQuantity = async function(req,res){
         
         // If product is not found
         if(!product){
-
+            
             // Throws Error
             return res.status(404).json({
                 message: "Product not found!!"
             });
         }
         
-        // Updating the quantity of the selected product
-        product.quantity += parseInt(update_quantity,10);
         
-        // storing the updated product
-        let updatedProduct = await product.save();
-        
+        update_quantity = parseInt(update_quantity,10);
 
-        // on success shows the updated product
-        return res.status(200).json({
-            data : {
-                product : {
-                    id : updatedProduct.id,
-                    name: updatedProduct.name,
-                    quantity: updatedProduct.quantity
-                }
-            },
-            message : "Product updated successfully"
-        });
+        // checking if the update quantity is number
+        if(!isNaN(update_quantity)){
+            
+            // Updating the quantity of the selected product
+            product.quantity += update_quantity;
+            
+            // storing the updated product
+            let updatedProduct = await product.save();
+            
+            
+            // on success shows the updated product
+            return res.status(200).json({
+                data : {
+                    product : {
+                        id : updatedProduct.id,
+                        name: updatedProduct.name,
+                        quantity: updatedProduct.quantity
+                    }
+                },
+                message : "Product updated successfully"
+            });
+        }
+        else{
+            // if not a number 
+            return res.status(400).json({
+                message : "Please enter a Number to update quantity"
+            });
+        }
+        
         
     }catch(err){
-
+        
         // To view error
         console.log("****",err);
-
+        
         //Throws error on failure
         return res.status(500).json({
             message : "Error in updating quantity"
