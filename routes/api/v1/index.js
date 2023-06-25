@@ -1,12 +1,11 @@
+// Importing Express
 const express = require('express');
 
+// Creating a router to redirect requests
 const router = express.Router();
 
-router.get('/',function(req,res){
-    return res.send("inside v1");
- })
-
-
+//Redirecting to products route
 router.use('/products',require('./product_api'));
 
+//Exporting the router
 module.exports = router;
